@@ -1,0 +1,36 @@
+// Complete the kangaroo function below.
+
+// Please either make the string static or allocate on the heap. For example,
+// static char str[] = "hello world";
+// return str;
+//
+// OR
+//
+// char* str = "hello world";
+// return str;
+//
+char* kangaroo(int x1, int v1, int x2, int v2) {
+    int min_pos,max_pos,d_min,d_max;
+    char *str1="YES";
+    char *str2="NO";
+    if(x1<x2){
+        min_pos=x1;
+        d_min=v1;
+        max_pos=x2;
+        d_max=v2;
+    }
+    else{
+        min_pos=x2;
+        d_min=v2;
+        max_pos=x1;
+        d_max=v1;
+    }
+    while(min_pos<max_pos){
+        min_pos=min_pos+d_min;
+        max_pos=max_pos+d_max;
+        if(min_pos==max_pos){
+            return str1;
+        }
+    }
+    return str2;
+}

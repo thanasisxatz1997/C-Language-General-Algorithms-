@@ -1,0 +1,16 @@
+// Complete the miniMaxSum function below.
+void miniMaxSum(int arr_count, int* arr) {
+    long int sum,summax=0,summin=0,min,max;
+    int i;
+    for(i=0;i<arr_count;i++){
+        sum=sum+*(arr+i);
+        if(min>*(arr+i)||i==0){
+            min=*(arr+i);
+        }
+        if(max<*(arr+i)||i==0){
+            max=*(arr+i);
+        }
+    }
+    printf("%ld ",sum-max);
+    printf("%ld",sum-min);
+}

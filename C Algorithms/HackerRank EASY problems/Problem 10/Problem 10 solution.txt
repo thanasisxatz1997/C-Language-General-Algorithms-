@@ -1,0 +1,15 @@
+// Complete the countApplesAndOranges function below.
+void countApplesAndOranges(int s, int t, int a, int b, int apples_count, int* apples, int oranges_count, int* oranges) {
+    int i,suma=0,sumo=0;
+    for(i=0;i<apples_count;i++){
+        if((*(apples+i)+a)>=s&&(*(apples+i)+a)<=t){
+            suma=suma+1;
+        }
+    }
+    for(i=0;i<oranges_count;i++){
+        if((*(oranges+i)+b)>=s&&(*(oranges+i)+b)<=t){
+            sumo=sumo+1;
+        }
+    }
+    printf("%d\n%d",suma,sumo);
+}
